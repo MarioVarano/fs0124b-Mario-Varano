@@ -1,0 +1,14 @@
+
+.sposta-centrato{
+   margin-left: 30%;
+   margin-right: 30%;
+}
+
+.bordo{
+    border-top: 1px; color: yellow;
+}
+
+
+#rosso{
+    color: red;
+}
