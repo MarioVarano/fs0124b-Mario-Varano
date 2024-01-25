@@ -1,14 +1,54 @@
+#header{
+    text-align: center;
+}
+/*serve per eliminare distanza dai bordi */
+body{
+    margin:auto;
+    text-align: center;
+}
 
-.sposta-centrato{
-   margin-left: 30%;
-   margin-right: 30%;
+.barra-gialla{
+    background-color:#fdfbf1;
+    border-top: 1px solid #ffd877;
+    padding-bottom:10px;
+    color:#1f7f7f;
+}
+
+#barra-verticale{
+    text-align: center;
+    border-left:1px solid #ffd877;
+    margin-top: 2rem;
+}
+
+.contenitore{
+    width:600px;
+    margin:0 auto;
+    text-align: center;
+
+}
+
+.contenitore-liste{
+    text-align:center;
+    width: auto;
+}
+
+.spazio{
+    margin-top: 2rem;
 }
 
 .bordo{
-    border-top: 1px; color: yellow;
+    text-align: center;
+    border-bottom: #1f7f7f 1px solid;
+    margin-bottom: 2rem;   
+}
+#autore{
+    text-align:center;
+    padding-top: 1rem;
+}
+#rosso{
+    color:red;
 }
 
-
-#rosso{
-    color: red;
+#verde{
+    color:#1f7f7f;
 }
