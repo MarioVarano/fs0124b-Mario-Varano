@@ -8,6 +8,7 @@ body{
 header{
     background-color:black;
     text-align: center;
+    padding: 50px 0 ;
 }
 .logo{
     width:180px;
@@ -53,12 +54,14 @@ h1, h3{
 }
 
 img{
-    width:auto;
+    display:inline;
 }
 
 .centra-img{
-    background-size: contain;
+    text-align: center;
     border:#dee1e3 1px solid;
+
+
 
 }
 
@@ -94,6 +97,10 @@ h2{
     padding-bottom:20px;
 }
 
+#bianco-contatti{
+    color:white;
+}
+
 .bianco-riduci{
     color:white;
     font-size:15px;
@@ -108,5 +115,15 @@ h2{
 
 footer{
     text-align: center;
-    background-color:#6b9aaf;
+    background-color:#25a2c3;
+}
+
+.centra-barra{
+    padding: 0 120px;
+}
+
+#bianco-contatti-fine{
+    color:white;
+    padding-top:20px;
+    padding-bottom:100px;
 }
