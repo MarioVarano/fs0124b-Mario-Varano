@@ -5,13 +5,19 @@ body{
 }
 
 header{
-    background-color:aqua ;
-    padding:10px;
+    background-color:hsl(190.08deg 92.91% 27.65%);
+    margin: 15px;
     box-sizing: border-box;
     text-align: center;
 }
 
 
+
 .titolo{
     color:white;
+    padding-top: 15px;
+}
+
+.lista{
+    padding: 15px;
 }
