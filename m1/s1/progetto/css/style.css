@@ -56,14 +56,18 @@ h1, h3{
 .centra-img{
     text-align: center;
     border:#dee1e3 1px solid;
-    padding:0 20px 20px 0;
-    overflow:auto;
+    padding:0 0 20px 0;
+    margin-bottom: 40px;
+
+}
+
+.centra-img img{
+    max-width: 100%;
 }
 
 
-
 .distanza-titoli{
-    padding-bottom:15px;
+    padding:15px 0 15px 0;
 }
 
 .distanza-argomenti{
@@ -86,7 +90,8 @@ h1, h3{
 
 h2{
     padding:50px 0 20px 0;
-    font-size: 30px;
+    font-size:30px;
+    font-weight: bold;
     color:white;
 }
 .bianco{
@@ -116,7 +121,7 @@ footer{
 }
 
 .centra-barra{
-    padding: 0 120px;
+    padding: 20px 120px;
 }
 
 #bianco-contatti-fine{
