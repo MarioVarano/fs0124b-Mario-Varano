@@ -69,3 +69,4 @@ let name1= 'jonh'
 let name2= 'Jonh'
 console.log(name1 == name2)
 console.log(name1 == name2.toLocaleLowerCase())
+console.log(name2)
