@@ -106,19 +106,30 @@ function reverseString(str){
 console.log(reverseString('EPICODE'));
 
 /* ESERCIZIO 8
- Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
- La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
+Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
+La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
 function upperFirst(stri){
-    a = stri.split(',')
-    for(i=0;i<a.lenght;i++){
-        
+
+    let parole= stri.split(' ')
+    let finale=[]
+
+    for(i=0; i<parole.length; i++){
+
+        let prima = parole[i][0].toUpperCase()
+        let resto = parole[i].slice(1)
+        fine = prima + resto
+        finale.push(fine)
+
+        risultato = finale.join(' ')
+
     }
+    return risultato
     
-    return a
 }
-console.log(upperFirst("mario,varano,crotone"));
+
+console.log(upperFirst('mario varano crotone'));
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
