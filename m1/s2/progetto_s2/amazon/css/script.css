@@ -1,0 +1,128 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E9EDEE;
+}
+.colore_header{
+    background-color:#222F3F;
+    height: 70px;
+}
+
+.dimensione{
+    height: 50px;
+    width: 120px;
+    padding: 10px 0 20px 20px;
+}
+
+nav{
+    background-color:#364757;
+    height: 35px;
+}
+
+.link{
+    color:white;
+    text-decoration: none;
+    padding:0 0 10px 20px;
+    display:inline-block;
+    margin-top: 10px;
+}
+
+
+.barra_arancione{
+    background-color:#F46600;
+    text-align: center;
+    height: 32px;
+    margin: 20px 20px 20px 20px;
+}
+
+.centra{
+    color:white;
+    padding-top:8px;
+}
+
+.sfondo{
+    background-image:url(../img/bg-image.png);
+    margin: 20px 20px 20px 20px;
+    height: 200px;
+    text-align: center;
+}
+
+h2{
+    color:white;
+    padding:60px 0 30px 0;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+p{
+    color: white;
+    font-weight: bold;
+}
+
+.cerca{
+    color:black;
+    padding:20px 10px 20px 20px;
+}
+
+.shop{
+    font-size: small;
+    color: #2E705F;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+.immagini_allineate{
+    background-color: white;
+    margin:0 20px 25px 20px;
+}
+
+.allinea{
+    background-size: cover;
+}
+
+.allinea img{
+    display:inline-block;
+    height: 280px;
+    width: 220px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 12%;
+}
+
+.img_larghe{
+    margin:0 20px 25px 20px;
+}
+
+.img_larghe img{
+    max-width: 100%;
+    text-align: center;
+}
+
+.cerca_s{
+    color:black;
+    padding:0 10px 20px 20px;
+    text-align: center;
+}
+
+.back{
+    background-color: #364759;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.top{
+    color: white;
+    font-weight: bold;
+}
+
+.fine{
+    background-color: #222F3F;
+    height: 200px;
+    text-align: center;
+}
+
+.ultimo{
+    padding-top: 50px;
+    height: 60px;
+    width: 120px;
+}
