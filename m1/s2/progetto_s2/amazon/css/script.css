@@ -77,15 +77,17 @@ p{
 }
 
 .allinea{
-    background-size: cover;
+    display: flex;
 }
 
 .allinea img{
     display:inline-block;
-    height: 280px;
-    width: 220px;
+    height: 360px;
+    width: 300px;
     padding: 10px 20px 10px 20px;
     border-radius: 12%;
+    margin:0 auto;
+
 }
 
 .img_larghe{
