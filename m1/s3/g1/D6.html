@@ -191,6 +191,7 @@
           testo = titolo.textContent
           stringa = testo.slice(0,-1)
           titolo.innerText= stringa
+          return testo
         })
       }
       console.log(makeItClickable())
@@ -199,14 +200,22 @@
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
-      const revealFooterLink = function () {}
+      const revealFooterLink = function () {
+        let footer = document.querySelector('footer')
+        let link = footer.querySelector('a')
+        ooter.addEventListener("click", () => {link.style.display = "block";})
+
+      }
+      console.log(revealFooterLink())
 
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
-      const generateTable = function () {}
+      const generateTable = function () {
+        
+      }
 
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
