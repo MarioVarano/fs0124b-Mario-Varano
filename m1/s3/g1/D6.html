@@ -111,10 +111,8 @@
       */
 
       const changePcontent = function () {
-        let p = document.querySelectorAll('p')
-        p[0].innerText = 'nuovo'
-        p[1].innerText = 'nuovo2'
-        return p[0], p[1]
+        let p = document.querySelectorAll('div p')
+        p.forEach(el => el.innerText= 'testo cambiato')
         
       }
       console.log(changePcontent())
@@ -125,8 +123,8 @@
       */
 
       const changeUrls = function () {
-        let a= document.querySelector('a:first-of-type')
-        a.href = 'https://www.google.com'
+        let a= document.querySelector('a:not(footer a)')
+        a.forEach(l => l.href ='https://www.google.com')
         return a
       }
       console.log(changeUrls())
@@ -134,14 +132,13 @@
       /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
-
       const addToTheSecond = function () {
-        let nuova = document.createElement('ul')
+        let nuova = document.createElement('li')
         let seconda = document.getElementById('secondList')
+        nuova.innerText = 'nuova'
         seconda.append(nuova)
-        return seconda
       }
-      console.log(addToTheSecond())
+      addToTheSecond()
       /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un paragrafo al primo div
     */
@@ -203,7 +200,7 @@
       const revealFooterLink = function () {
         let footer = document.querySelector('footer')
         let link = footer.querySelector('a')
-        ooter.addEventListener("click", () => {link.style.display = "block";})
+        footer.addEventListener("click", () => {link.style.display = "block";})
 
       }
       console.log(revealFooterLink())
@@ -214,7 +211,8 @@
     */
 
       const generateTable = function () {
-        
+        let destinazione = document.getElementById('tableArea')
+
       }
 
       /* ESERCIZIO 12
