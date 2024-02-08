@@ -1,0 +1,52 @@
+.testo{
+    text-align: center;
+    margin: 50px auto;
+
+}
+
+.testo h1{
+    font-weight: bold;
+    font-size: 100px;
+}
+
+.tombolone{
+    background-color: aquamarine;
+    margin:0 100px;
+}
+
+.bottone{
+    text-align: center;
+    cursor: pointer;
+    margin: 50px auto;
+}
+
+.estrai-random{
+    background-color: white;
+    color: black;
+    padding: 30px 70px;
+    font-size: 25px;
+    border-radius: 35px;
+}
+
+.caselle{
+    display:flex;
+    margin: 50px 50px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.singola{
+    flex: 0 1 calc(100% / 10);
+    border: 5px solid black;
+    padding:15px 15px;
+    background-color: white;
+    margin:0 15px 15px 0;
+    border-radius: 50px;
+    
+
+}
+
+.selezionata{
+    background-color: rgb(13, 204, 140);
+}
+
