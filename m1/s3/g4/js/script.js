@@ -12,9 +12,6 @@ target.append(casella)
 const bottone = document.querySelector('.estrai-random')
 bottone.addEventListener('click' ,function(){
     const numeroEstratto = Math.floor(Math.random() * 76 ) + 1 
-
-
-    
     if(casella.innerText == Number(numeroEstratto)){
         casella.classList.add('selezionata')
     }
