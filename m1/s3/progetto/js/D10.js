@@ -537,7 +537,18 @@ function aggiungi(){
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
-*/
+*/function isItPrime(n){
+  if(n == 1 || n == 2){
+    return true
+  }
+  for(i=2; i<n; i++){
+    if(n % i == 0){
+      return false
+    }
+  }
+  return true
+}
+console.log(isItPrime(7));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
