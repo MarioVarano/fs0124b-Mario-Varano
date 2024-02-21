@@ -4,6 +4,7 @@ nav{
     width: 90%;
     min-height: 150px;
     border-radius: 132px;
+    gap: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,10 +16,23 @@ nav{
     color:#612406;
     text-decoration: none;
     border-radius: 50px;
-
+    flex: 1 1 50px;
+    text-align: center;
+    margin:0 10px;
 }
 
 
-.link img{
-    
+img{
+    width:40%;
+}
+
+
+#ape{
+    flex: 2 0 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+
 }

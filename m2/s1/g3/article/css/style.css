@@ -1,0 +1,35 @@
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 15px;
+    color: #78290C;
+}
+
+article{
+    background-color: #FEF7E2;
+    margin-inline: 15px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 25px;
+    border-radius: 30px;
+}
+
+article .contenitore_article{
+    flex: 1 1 400px;
+    line-height: 1.4;
+}
+
+article img{
+    flex: 1 1 500px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.contenitore_article h2{
+    font-size: 30px;
+    color:#78290C;
+    font-weight: bold;
+    padding: 15px 0;
+
+}
