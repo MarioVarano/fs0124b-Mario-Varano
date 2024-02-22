@@ -1,0 +1,61 @@
+.conteiner{
+    width: 100%;
+    height: 500px;
+    background-color:#666666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.task{
+    margin: 30px;
+    width: 17%;
+    height: 35%;
+    text-align: center;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 -1px 10px black;
+    transition-property: width 1s, transform 0s;
+}
+
+.task:hover{
+    height: 250px;
+    width: 250px;
+    z-index: 1;
+    transform: none;
+    margin: 0;
+}
+
+.task h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.task p{
+    position: absolute;
+    left:42px;
+    bottom:45px;
+}
+
+.y{
+    background-color: #F7F7C5;
+    transform: rotate(-8deg);
+}
+
+.p{
+    background-color: #C8C8F6;
+    transform: rotate(-9deg);
+}
+
+.g{
+    background-color: #C9F9CB;
+    transform: rotate(8deg);
+}
+
+.diverso{
+    transform: rotate(4deg);
+}
