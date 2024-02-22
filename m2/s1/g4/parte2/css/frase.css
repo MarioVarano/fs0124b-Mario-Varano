@@ -8,3 +8,47 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+
+
+#testoAlternato {
+    height: 150px;
+    width: 70%;
+    border: 2px solid black;
+    margin: 50px;
+}
+
+
+#testoAlternato p {
+    margin: 30px;
+    font-size: 20px;
+}
+
+.parole i {
+    color: #6B889C;
+}
+
+@keyframes animazione-frase {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+        /* Sposta la frase dal basso */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Posiziona la frase in basso */
+    }
+}
+
+.frase.attiva {
+    animation: animazione-frase 0.5s ease-in-out forwards;
+}
+
+.frase:not(.attiva):nth-of-type(1) {
+    animation: animazione-frase 0.5s ease-in-out 0.5s forwards;
+}
+
+.frase:not(.attiva):nth-of-type(2) {
+    animation: animazione-frase 0.5s ease-in-out 1s forwards;
+}

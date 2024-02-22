@@ -10,7 +10,8 @@
 
 .task{
     margin: 30px;
-    width: 17%;
+    width: 18%;
+    flex: 1 1 350px;
     height: 35%;
     text-align: center;
     line-height: 1.2;
@@ -19,7 +20,7 @@
     justify-content: center;
     position: relative;
     box-shadow: inset 0 -1px 10px black;
-    transition-property: width 1s, transform 0s;
+    transition-property: width 2s, transform 0s;
 }
 
 .task:hover{
@@ -30,6 +31,13 @@
     margin: 0;
 }
 
+.task:hover p{
+    position: absolute;
+
+    left: 152px;
+    bottom: 70px;
+}
+
 .task h2{
     font-size: 40px;
     font-weight: bold;
@@ -37,8 +45,9 @@
 
 .task p{
     position: absolute;
-    left:42px;
-    bottom:45px;
+    left:140px;
+    bottom:40px;
+    font-size: 20px;
 }
 
 .y{
