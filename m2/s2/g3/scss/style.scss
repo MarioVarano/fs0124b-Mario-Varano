@@ -1,0 +1,105 @@
+@import 'reset.scss';
+@import 'bottoni.scss';
+@import 'font.scss';
+@import 'colori.scss';
+
+
+body{
+    font-family:$font
+}
+
+header{
+    background-color: $bg_hero; 
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+}
+
+nav img{
+    max-width: 100px;
+    height: 80px;
+}
+
+
+main{
+    background-color: $bg_hero;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 800px;
+    position: relative;
+}
+
+.testo{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.testo button{
+    padding: 20px 30px;
+    margin-top: 30px;
+    margin-right: 5px;
+    color:white;
+    border-radius: 15px;
+}
+
+.testo button:nth-of-type(1){
+    background-color:nth($colori-bottoni,1);
+}
+
+.testo button:nth-of-type(2){
+    background-color: nth($colori-bottoni,2);
+}
+
+.testo button:nth-of-type(3){
+    background-color: nth($colori-bottoni,3);
+}
+
+.relative{
+    width: 30%;
+    position: relative;
+}
+
+.absolute{
+    height: 500px;
+    position: absolute;
+    right: 80px;
+    top: 100px;
+}
+
+h1{
+    @include titolo
+}
+
+p{
+    @include paragrafo
+}
+
+.griglia{
+    height: 500px;
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+.griglia img{
+    width: 400px;
+    aspect-ratio: 1/1.5;
+
+}

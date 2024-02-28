@@ -1,0 +1,12 @@
+$font:'Times New Roman', Times, serif;
+
+@mixin titolo{
+    color:#28064F;
+    font-size: 120px;
+}
+
+
+@mixin paragrafo{
+    color:$colore-testo;
+    font-size:25px;
+}
