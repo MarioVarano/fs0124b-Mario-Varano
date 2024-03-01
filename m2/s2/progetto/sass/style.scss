@@ -1,0 +1,41 @@
+
+
+
+body{
+    background-color: black;
+}
+
+
+
+.logo_dim {
+    width: 25%;
+}
+@media screen and (min-width:990px) {
+    .logo_dim{
+        width: 15%;
+    }
+}
+
+.dim {
+    width: 100%;
+}
+
+.avatar{
+    width: 32px;
+    aspect-ratio: 1/1;
+}
+
+.col-3.inf{
+    width: 17%;
+}
+
+@media screen and (min-width:991) {
+    .img_lg{
+        width: 30%;
+    }
+    
+}
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
