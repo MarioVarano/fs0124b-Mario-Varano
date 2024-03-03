@@ -1,18 +1,11 @@
 
-
-
-body{
-    background-color: black;
-}
-
-
-
 .logo_dim {
     width: 25%;
 }
+
 @media screen and (min-width:990px) {
-    .logo_dim{
-        width: 15%;
+    .logo_dim {
+        width: 12%;
     }
 }
 
@@ -20,21 +13,52 @@ body{
     width: 100%;
 }
 
-.avatar{
+.avatar {
     width: 32px;
     aspect-ratio: 1/1;
 }
 
-.col-3.inf{
+.col-3.inf {
     width: 17%;
 }
+@media screen and (min-width:1150px){
+    .col-3.reg{
+        width: 15%;
+    }
 
-@media screen and (min-width:991) {
-    .img_lg{
+
+}
+
+@media screen and (min-width:991px) {
+    .img_lg {
         width: 30%;
     }
-    
 }
+
+.bi.hov:hover{
+    color: blue;
+}
+
+
+.container_mio{
+    width: 59%;
+    margin: 25px auto;
+}
+
+@media screen and (min-width:1024px){
+    .container_mio.profile{
+        width: 40%;
+        margin: 25px auto;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .container_mio{
+        width:95%
+    }
+}
+//profile page
 
 
 
