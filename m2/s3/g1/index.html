@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <h1>Form per creare una classe</h1>
+    <form>
+        <label for="petName">Nome animale:</label>
+        <input type="text" class="petName" name="petName"><br><br>
+        <label for="ownerName">Nome proprietario:</label>
+        <input type="text" class="ownerName" name="ownerName"><br><br>
+        <label for="species">Tipo di animale:</label>
+        <select name="specie" class="species">
+        <option value="cane">Cane</option>
+        <option value="gatto">Gatto</option>
+        <option value="drago">Drago</option>
+        <option value="elefante">Elefante</option>
+        </select><br><br>
+        <label for="breed">Razza:</label>
+        <select name="razza" class="breed">
+        <option value="labrador">Labrador</option>
+        <option value="soriano">Soriano</option>
+        <option value="drago di fuoco">Drago di fuoco</option>
+        <option value="elefante africano">Elefante Africano</option>
+        </select><br><br>
+    </form>
+    <button class="creaClasse">Crea Classe</button>
+
+
+
+
+
+
+    <script>
+        class User{
+            constructor(nome,cognome,età,luogo){
+                this.firstName =nome;
+                this.lastName =cognome;
+                this.age =età;
+                this.location =luogo;
+            }
+
+            confronta(numero,nome){
+                if(numero > this.age){
+                    console.log(`${this.firstName} ha ${this.age} anni ed è più giovane di ${nome} che ha ${numero} anni`);
+                }
+                else{
+                    console.log(`${this.firstName} ha ${this.age} anni ed è più vecchio di ${nome} che ha ${numero} anni`);
+
+                }
+            }
+        }
+
+
+        let user = new User('Mario','Varano',28,'Crotone')
+        let user2 = new User('Emily','Zito',27,'Crotone')
+        console.log(user, user2);
+        user.confronta(user2.age,user2.firstName)
+
+
+        class Pet{
+            constructor(nomeAnimale,nomeProprietario,specie,razza){
+                this.petName = nomeAnimale;
+                this.ownerName = nomeProprietario;
+                this.species = specie;
+                this.breed = razza;
+            }
+
+        }
+        
+
+        animali = []
+        document.querySelector(".creaClasse").addEventListener('click',function() {
+            let nomeAnimale = document.querySelector(".petName").value
+            let nomeProprietario= document.querySelector(".ownerName").value
+            let specie = document.querySelector(".species").value
+            let razza = document.querySelector(".breed").value
+            
+            let animale = new Pet(nomeAnimale, nomeProprietario, specie, razza) 
+            animali.push(animale)
+            console.log(animali);
+            
+            
+        })
+        
+
+
+
+    </script>
+</body>
+</html>
