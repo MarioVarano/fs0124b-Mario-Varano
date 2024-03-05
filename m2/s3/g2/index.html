@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S3/G2</title>
+  </head>
+  <body>
+    <div class="target"></div>
+    <label for="nome">Nome da inserire:</label>
+    <input type="text" class="nome" name="nome" />
+    <button class="invia">Invia</button>
+    <button class="elimina">Elimina</button>
+
+    <h1>Contatore</h1>
+    <div class="contatore"></div>
+
+    <script>
+      let salva = document.querySelector(".invia");
+      let elimina = document.querySelector(".elimina");
+
+      salva.addEventListener("click", function () {
+        let valore = document.querySelector(".nome").value;
+        let visualizza = document.querySelector(".target");
+        visualizza.textContent = valore;
+        localStorage.setItem("Salvato", valore);
+      });
+
+      elimina.addEventListener("click", function () {
+        localStorage.removeItem("Salvato") || "";
+      });
+
+      var contatore = parseInt(sessionStorage.getItem("contatore")) || 0;
+
+      // Funzione per aggiornare il contatore e il sessionStorage ogni secondo
+      setInterval(function () {
+        contatore++;
+        sessionStorage.setItem("counter", contatore);
+        document.querySelector(".contatore").textContent = contatore;
+      }, 1000);
+
+      // Aggiornare il valore visualizzato all'avvio
+      document.querySelector(".contatore").textContent = contatore;
+    </script>
+    
+  </body>
+</html>
