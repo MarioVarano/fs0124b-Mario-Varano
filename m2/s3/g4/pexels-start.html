@@ -495,9 +495,8 @@
 
                   call('gatti').then(gatti =>{
                     let foto = gatti.photos
-                    foto.forEach(una => {
-                      console.log(una);
-                      
+                    foto.forEach(unafoto => {
+                      immagine.src = unafoto.src.landscape
                     });
                   })
     </script>
