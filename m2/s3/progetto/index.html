@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creazione</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="conteiner-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <img src="./img/logo.png" alt="logo" class="dim">
+            <a href="prodotti.html">Prodotti</a>
+        </nav>
+        <div class="container bg-white">
+            <h1>Add product</h1>
+            <form>
+                <label for="nome" class="form-label mb-2">Nome</label>
+                <input type="text" id="nome" required class="form-control mb-2" placeholder="Nome Prodotto">
+                <label for="nome" class="form-label mb-2">Brand</label>
+                <input type="text" id="brand" required class="form-control mb-2" placeholder="Modello">
+                <label for="nome" class="form-label mb-2">Prezzo</label>
+                <input type="text" id="prezzo" required class="form-control mb-2" placeholder="$">
+                <label for="nome" class="form-label mb-2">Url immagine</label>
+                <input type="text" id="immagine" required class="form-control mb-2" placeholder="https://esempio/200/300">
+                <label for="nome" class="form-label mb-2">Descrizione Prodotto</label>
+                <textarea class="form-control mb-2" id="textarea" rows="3"></textarea>
+               <div class="d-flex justify-content-end">
+                   <button id="salva" class="btn btn-success me-2">Salva</button>
+                   <button type='reset'id="reset" class="btn btn-info">Reset</button>
+               </div>
+            </form>
+    </div>
+
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

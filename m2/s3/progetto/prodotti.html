@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="conteiner-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <img src="./img/logo.png" alt="logo" class="dim">
+            <a href="index.html">Back Office</a>
+        </nav>
+        <div class="container bg-white">
+            <h1>Prodotti</h1>
+            <div class="row border-top" id="target">
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        <template id="card">
+            <div class="col-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="" class="card-img-top" id="image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" id="nomeProdotto"></h5>
+                        <p class="card-text" id="marca"></p>
+                        <p class="card-text" id="testo"></p>
+                        <p class="card-text" id="costo"></p>
+                        <a href="modifica.html" class="btn btn-success">Modifica</a>
+                        <a href="#" class="btn btn-primary">Scopri</a>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+
+
+
+
+
+
+
+
+    <script src="./js/prodotti.js"></script>
+</body>
+</html>
