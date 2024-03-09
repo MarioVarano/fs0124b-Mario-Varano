@@ -18,11 +18,18 @@ fetch(`https://striveschool-api.herokuapp.com/api/product/`,{
 .then(res => res.json())
 .then(telefoni => telefoni.forEach(telefono => {
     let card = generaClone()
-    console.log(telefono);
     card.querySelector('#nomeProdotto').innerText = telefono.name
     card.querySelector('#marca').innerText = telefono.brand
     card.querySelector('#testo').innerText = telefono.description
     card.querySelector('#costo').innerText = telefono.price
     card.querySelector('#image').src = telefono.imageUrl
+    let id = telefono._id
+    console.log(id);
+    card.querySelector('#modifica').addEventListener('click',function(){
+        location.href = 'modifica.html?id='+ id
+    })
+
+
+
     document.getElementById('target').appendChild(card);
 }))
