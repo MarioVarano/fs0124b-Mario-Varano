@@ -24,9 +24,11 @@ fetch(`https://striveschool-api.herokuapp.com/api/product/`,{
     card.querySelector('#costo').innerText = telefono.price
     card.querySelector('#image').src = telefono.imageUrl
     let id = telefono._id
-    console.log(id);
     card.querySelector('#modifica').addEventListener('click',function(){
         location.href = 'modifica.html?id='+ id
+    })
+    card.querySelector('#dettagli').addEventListener('click', function(){
+        location.href = 'dettagli.html?id=' + id
     })
 
 

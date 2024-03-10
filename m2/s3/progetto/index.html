@@ -9,28 +9,37 @@
   </head>
   <body>
     <div class="conteiner-fluid">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg" id="colore">
+          <div class="d-flex justify-content-between align-items-center w-100">
             <img src="./img/logo.png" alt="logo" class="dim">
-            <a href="prodotti.html">Prodotti</a>
+                <a href="prodotti.html" class="text-white me-3">Home</a>
+        </div>
         </nav>
-        <div class="container bg-white">
-            <h1>Add product</h1>
+        <div class="container-fluid bg-white">
+          <div class="container">
+            <h1 class="pb-3 border-bottom">Add product</h1>
             <form>
                 <label for="nome" class="form-label mb-2">Nome</label>
                 <input type="text" id="nome" required class="form-control mb-2" placeholder="Nome Prodotto">
                 <label for="nome" class="form-label mb-2">Brand</label>
                 <input type="text" id="brand" required class="form-control mb-2" placeholder="Modello">
                 <label for="nome" class="form-label mb-2">Prezzo</label>
-                <input type="text" id="prezzo" required class="form-control mb-2" placeholder="$">
+                <input type="number" id="prezzo" required class="form-control mb-2" placeholder="$">
                 <label for="nome" class="form-label mb-2">Url immagine</label>
                 <input type="text" id="immagine" required class="form-control mb-2" placeholder="https://esempio/200/300">
                 <label for="nome" class="form-label mb-2">Descrizione Prodotto</label>
                 <textarea class="form-control mb-2" id="textarea" rows="3"></textarea>
-               <div class="d-flex justify-content-end">
-                   <button id="salva" class="btn btn-success me-2">Salva</button>
-                   <button type='reset'id="reset" class="btn btn-info">Reset</button>
+               <div class="row justify-content-end">
+                <div class="col-3">
+                  <button type='reset'id="reset" class="btn w-100 btn-light border me-3">Reset</button>
+                </div>
+                <div class="col-3">
+                  <button id="salva" class="btn w-100 btn-warning">Salva</button>
+                </div>
                </div>
             </form>
+          </div>
+           
     </div>
 
 

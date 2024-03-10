@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettagli</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="conteiner-fluid">
+        <nav class="navbar navbar-expand-lg" id="colore">
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <img src="./img/logo.png" alt="logo" class="dim">
+                <a href="prodotti.html" class="text-white me-3">Prodotti</a>
+            </div>
+        </nav>
+        <div class="container-fluid bg-white">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center w-100 pb-3 border-bottom">
+                    <h1 >Details</h1>
+                    <a href="prodotti.html">Go back</a>
+                </div>
+                <div class="card mb-3  mt-4" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="" class="img-fluid rounded-start" id="immagine" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text" id="marca"></p>
+                            <h5 class="card-title" id="nomeProdotto"></h5>
+                            <p class="card-text text-warning btn btn-dark" id="costo"></p>
+                            <p class="card-text" id="testo"></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+  <script src="./js/dettaglio.js"></script>      
+</body>
+</html>
