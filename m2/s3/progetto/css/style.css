@@ -7,3 +7,10 @@
     width: 10%;
     
 }
+
+.card{
+    width:18rem;
+}
+#max{
+    max-width: 540px;
+}
