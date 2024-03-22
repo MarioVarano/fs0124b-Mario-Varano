@@ -1,0 +1,31 @@
+<h1 class="text-center">Auto Fiat</h1>
+<app-nav></app-nav>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 w-75">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <img class="w-50" src="../../../assets/loghi/fiat logo.png" alt="logo">
+        </div>
+        <div class="col-6  bg-body-tertiary">
+          <h3 class="mt-3">Le nostre auto Fiat</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container w-75 my-5">
+      <div class="row justify-content-between ">
+        <div *ngFor = "let macchina of fiat" class="col-4">
+          <div class="card" >
+            <img [src]="[macchina.modelImage]" class="card-img-top" alt="macchina">
+            <div [style.background-color]="cambiaColore(macchina.available)" class="card-body">
+              <h5 class="card-title">{{macchina.model}}</h5>
+              <p>{{macchina.year}}</p>
+              <p>{{macchina.price}}.</p>
+              <p>Pronta consegna:{{macchina.available}}.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
