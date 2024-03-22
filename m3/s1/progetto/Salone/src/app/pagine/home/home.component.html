@@ -29,7 +29,7 @@
         <div [style.background-color]="cambiaColore(macchina.available)" class="card-body">
           <h5 class="card-title">{{macchina.model}}</h5>
           <p>{{macchina.year}}</p>
-          <p>{{macchina.price}}</p>
+          <p>{{macchina.price | currency:'EUR'}}</p>
           <p>Pronta consegna:{{macchina.available}}</p>
           <button [routerLink]="['/',macchina.brand]" class="btn btn-primary">Tutte le nostre {{macchina.brand}}</button>
         </div>
