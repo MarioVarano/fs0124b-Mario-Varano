@@ -25,7 +25,7 @@
   <div class="row justify-content-evenly ">
     <div *ngFor = "let macchina of macchineCasuali" class="col-3">
       <div class="card" >
-        <img [src]="[macchina.modelImage]" class="w-50" alt="macchina">
+        <img [src]="[macchina.modelImage]" alt="macchina">
         <div [style.background-color]="cambiaColore(macchina.available)" class="card-body">
           <h5 class="card-title">{{macchina.model}}</h5>
           <p>{{macchina.year}}</p>
