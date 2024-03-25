@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { iArticolo } from '../../models/articolo';
 
 @Component({
-  selector: 'app-inactive',
-  templateUrl: './inactive.component.html',
-  styleUrl: './inactive.component.scss'
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss'
 })
-export class InactiveComponent {
+export class HomeComponent {
+  randomArr:iArticolo[]=[]
   articoliArr:iArticolo[]= [ {
     "id": 1,
     "title": "His mother had always taught him",
@@ -250,14 +251,21 @@ export class InactiveComponent {
 
 
 
-  inactive:iArticolo[] = []
-
   ngOnInit(){
-    this.inactive = this.getinActive()
+    return this.articoliRandom()
   }
 
-  getinActive():iArticolo[]{
-    return this.articoliArr.filter((articolo) => !articolo.active)
+  randomIndice(): number {
+    let lungh = this.articoliArr.length
+    let indice = Math.floor(Math.random()* lungh)
+    return indice
   }
 
+  articoliRandom(){
+    for(let i = 0; i<4; i++){
+      let casuale = this.randomIndice()
+      this.randomArr.push(this.articoliArr[casuale])
+    }
+    return this.randomArr
+  }
 }

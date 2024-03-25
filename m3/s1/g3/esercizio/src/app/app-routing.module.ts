@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ActiveComponent } from './pagine/active/active.component';
 import { InactiveComponent } from './pagine/inactive/inactive.component';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './pagine/home/home.component';
+import { TuttiComponent } from './pagine/tutti/tutti.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:AppComponent
+    component:HomeComponent
   },
   {
     path:'active',
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'inactive',
     component:InactiveComponent
+  },
+  {
+    path:'tutti',
+    component:TuttiComponent
   }
 ];
 

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { iArticolo } from '../../models/articolo';
 
 @Component({
-  selector: 'app-inactive',
-  templateUrl: './inactive.component.html',
-  styleUrl: './inactive.component.scss'
+  selector: 'app-tutti',
+  templateUrl: './tutti.component.html',
+  styleUrl: './tutti.component.scss'
 })
-export class InactiveComponent {
+export class TuttiComponent {
   articoliArr:iArticolo[]= [ {
     "id": 1,
     "title": "His mother had always taught him",
@@ -248,16 +248,8 @@ export class InactiveComponent {
     "active": true
   }]
 
-
-
-  inactive:iArticolo[] = []
-
   ngOnInit(){
-    this.inactive = this.getinActive()
-  }
-
-  getinActive():iArticolo[]{
-    return this.articoliArr.filter((articolo) => !articolo.active)
+    return this.articoliArr
   }
 
 }
