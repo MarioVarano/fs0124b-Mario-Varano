@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let prodotto of prodotti" class="col-4">
+      <div class="card" style="width: 18rem;">
+        <img [src]="prodotto.thumbnail" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{prodotto.title}}</h5>
+          <p class="card-text">{{prodotto.description}}</p>
+          <p class="card-text">{{prodotto.brand}}</p>
+          <p class="card-text">{{prodotto.price}}</p>
+          <p class="card-text">{{prodotto.stock}}</p>
+          <a href="#" class="btn btn-primary me-2"(click)="salvaProdotto(prodotto)">Preferiti</a>
+          <a href="#" class="btn btn-primary">Carrello</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
