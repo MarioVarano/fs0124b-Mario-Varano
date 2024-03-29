@@ -6,7 +6,7 @@
   <div class="row ">
         <div class="col-12">
           <div class="form-check">
-            <input class="form-check-input" (click)="cambiaColore(todo.id)" type="checkbox" [checked]="todo.completed" id="flexCheckDefault">
+            <input class="form-check-input" (click)="cambiaColore(todo.id)" type="checkbox" [(ngModel)]="todo.completed" id="flexCheckDefault">
             <p class="fw-bold">{{todo.todo}}</p>
           </div>
           <div class="col-12">

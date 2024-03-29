@@ -7,6 +7,7 @@ import { HomeComponent } from './pagine/home/home.component';
 import { CompletiComponent } from './pagine/completi/completi.component';
 import { DaFareComponent } from './pagine/da-fare/da-fare.component';
 import { PerUtenteComponent } from './pagine/per-utente/per-utente.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PerUtenteComponent } from './pagine/per-utente/per-utente.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

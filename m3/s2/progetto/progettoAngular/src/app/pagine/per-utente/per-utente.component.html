@@ -9,11 +9,11 @@
           <h5 class="card-title">{{user.firstName + user.lastName}}</h5>
           <p class="card-text"><small class="text-body-secondary">{{user.title}}</small></p>
           <div class="form-check" *ngFor="let todo of user.todos">
-            <input class="form-check-input" (click)="cambiaColore(todo.id)" type="checkbox" [checked]="todo.completed" id="flexCheckDefault">
-            <p class="fw-bold">{{todo.todo}}</p>
+            <input class="form-check-input" (click)="cambiaColore(todo.id)" type="checkbox" [(ngModel)]="todo.completed" id="flexCheckDefault">
+            <p class="fw-bold" [ngClass]="{'bg-success-subtle': todo.completed, 'bg-danger-subtle': !todo.completed}">{{todo.todo}}</p>
           </div>
           <div class="col-12">
-            <small>Assigned to:{{user.firstName + ' ' + user.lastName}}</small>
+            <small>Assigned to: {{user.firstName + ' ' + user.lastName}}</small>
           </div>
         </div>
       </div>
