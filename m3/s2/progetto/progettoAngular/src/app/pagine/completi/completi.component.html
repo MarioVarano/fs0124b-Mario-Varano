@@ -1,0 +1,14 @@
+<div class="container">
+  <input type="text" class="form-control my-4" placeholder="Nome Utente">
+  <div class="row ">
+    <div class="col-12" *ngFor="let todo of todoArrComp ">
+<div class="mb-3" [ngClass]="{'bg-success-subtle': todo.completed, 'bg-danger-subtle': !todo.completed}">
+  <div class="row ">
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" (click)="cambiaColore(todo.id)" type="checkbox" [checked]="todo.completed" id="flexCheckDefault">
+            <p class="fw-bold">{{todo.todo}}</p>
+          </div>
+          <div class="col-12">
+          <p>Assigned to:{{mapUser(todo.userId)}}
+</div>
