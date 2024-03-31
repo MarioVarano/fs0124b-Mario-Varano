@@ -7,7 +7,7 @@ import { UsersService } from './users.service';
 })
 export class ToDOService {
 
-
+  prova:iToDo[] = []
 
   todoARR:iToDo[] = [
     {
@@ -931,12 +931,6 @@ export class ToDOService {
     }
   }
 
-  addToDoUser(){
-    return this.userSvc.getAllUser().map(user => {
-      user.todos = this.getAlltodo().filter(todo => todo.userId == user.id)
-      return user
-    })
-  }
 
 
 }

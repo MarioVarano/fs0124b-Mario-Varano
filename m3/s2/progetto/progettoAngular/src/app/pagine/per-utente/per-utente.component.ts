@@ -13,6 +13,8 @@ export class PerUtenteComponent {
   userArr:iUsers[] = []
   todoArr:iToDo[]= []
   arr:iUsers[] = []
+  prova:iUsers[] = []
+
 
   constructor(private todoSvc:ToDOService,
     private userSvc:UsersService
@@ -22,8 +24,10 @@ export class PerUtenteComponent {
       this.todoSvc.getById(id)
     }
 
-    mapToDo(id:number){
-      this.todoArr = this.todoSvc.getAlltodo().filter(todo => todo.id === id)
+    mapToDo(id:number): iToDo[]{
+      return this.todoArr = this.todoSvc.getAlltodo().filter(todo => todo.userId === id)
+      console.log(this.todoArr);
+
     }
 
     mapUser(id:number){
@@ -35,7 +39,7 @@ export class PerUtenteComponent {
 
     ngOnInit(){
       this.userArr = this.userSvc.getAllUser()
-      this.arr = this.todoSvc.addToDoUser()
+
 
 
 

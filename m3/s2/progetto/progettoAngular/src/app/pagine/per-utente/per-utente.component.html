@@ -8,7 +8,7 @@
         <div class="card-body">
           <h5 class="card-title">{{user.firstName + user.lastName}}</h5>
           <p class="card-text"><small class="text-body-secondary">{{user.title}}</small></p>
-          <div class="form-check" *ngFor="let todo of user.todos">
+          <div class="form-check" *ngFor="let todo of mapToDo(user.id)">
             <input class="form-check-input" (click)="cambiaColore(todo.id)" type="checkbox" [(ngModel)]="todo.completed" id="flexCheckDefault">
             <p class="fw-bold" [ngClass]="{'bg-success-subtle': todo.completed, 'bg-danger-subtle': !todo.completed}">{{todo.todo}}</p>
           </div>
