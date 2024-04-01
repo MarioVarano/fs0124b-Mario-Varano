@@ -12,8 +12,6 @@ import { iToDo } from '../../Modules/to-do';
 export class PerUtenteComponent {
   userArr:iUsers[] = []
   todoArr:iToDo[]= []
-  arr:iUsers[] = []
-  prova:iUsers[] = []
 
 
   constructor(private todoSvc:ToDOService,
@@ -26,7 +24,6 @@ export class PerUtenteComponent {
 
     mapToDo(id:number): iToDo[]{
       return this.todoArr = this.todoSvc.getAlltodo().filter(todo => todo.userId === id)
-      console.log(this.todoArr);
 
     }
 
