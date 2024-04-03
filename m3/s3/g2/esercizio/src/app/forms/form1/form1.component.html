@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Template driven form</h1>
+  <form (ngSubmit)="submit(f)" #f="ngForm">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Username</label>
+      <input type="text" class="form-control" required name="nome" ngModel #nome="ngModel" placeholder="Nome Utente">
+      <div *ngIf="nome.invalid" class="alert alert-danger">
+        Devi inserire i campi
+      </div>
+      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email" ngModel placeholder="name@example.com">
+    </div>
+    <button [disabled]="f.invalid" class="btn btn-success">Invia</button>
+  </form>
+</div>
+Validità del form: {{f.valid}}
