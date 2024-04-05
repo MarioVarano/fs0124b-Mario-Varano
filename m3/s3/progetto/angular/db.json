@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "author": "typicode"
+    },
+    {
+      "email": "Alexxan@live.it",
+      "password": "$2a$10$7.C8e.4mw4dE42ksM1qwu.9eRZOBFzRElhIY6uFKqCvPyc1lwlAQK",
+      "name": "mario",
+      "id": 2
+    }
+  ],
+  "movies-popular": [
+    {
+      "id": 1,
+      "titolo": "Inception",
+      "anno": 2010,
+      "genere": "Action, Adventure, Sci-Fi",
+      "trama": "A skilled thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "image": "https://picsum.photos/id/237/200/300"
+  },
+  {
+      "id": 2,
+      "titolo": "The Shawshank Redemption",
+      "anno": 1994,
+      "genere": "Drama",
+      "trama": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "image": "https://picsum.photos/id/238/200/300"
+  },
+  {
+      "id": 3,
+      "titolo": "The Godfather",
+      "anno": 1972,
+      "genere": "Crime, Drama",
+      "trama": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "image": "https://picsum.photos/id/239/200/300"
+  },
+  {
+      "id": 4,
+      "titolo": "The Dark Knight",
+      "anno": 2008,
+      "genere": "Action, Crime, Drama",
+      "trama": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "image": "https://picsum.photos/id/240/200/300"
+  },
+  {
+      "id": 5,
+      "titolo": "Pulp Fiction",
+      "anno": 1994,
+      "genere": "Crime, Drama",
+      "trama": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "image": "https://picsum.photos/id/241/200/300"
+  },
+  {
+      "id": 6,
+      "titolo": "The Lord of the Rings: The Fellowship of the Ring",
+      "anno": 2001,
+      "genere": "Action, Adventure, Drama",
+      "trama": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+      "image": "https://picsum.photos/id/242/200/300"
+  },
+  {
+      "id": 7,
+      "titolo": "Fight Club",
+      "anno": 1999,
+      "genere": "Drama",
+      "trama": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+      "image": "https://picsum.photos/id/243/200/300"
+  },
+  {
+      "id": 8,
+      "titolo": "Forrest Gump",
+      "anno": 1994,
+      "genere": "Drama, Romance",
+      "trama": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "image": "https://picsum.photos/id/244/200/300"
+  },
+  {
+      "id": 9,
+      "titolo": "The Matrix",
+      "anno": 1999,
+      "genere": "Action, Sci-Fi",
+      "trama": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+      "image": "https://picsum.photos/id/245/200/300"
+  },
+  {
+      "id": 10,
+      "titolo": "The Silence of the Lambs",
+      "anno": 1991,
+      "genere": "Crime, Drama, Thriller",
+      "trama": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+      "image": "https://picsum.photos/id/246/200/300"
+  }
+  ],
+  "favorites": {
+    "name": "typicode"
+  }
+}
