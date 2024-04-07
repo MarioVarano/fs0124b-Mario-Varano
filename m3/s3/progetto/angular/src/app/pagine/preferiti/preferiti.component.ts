@@ -19,8 +19,10 @@ export class PreferitiComponent {
   ){}
 
   ngOnInit(){
-    this.authSVC.user$.subscribe(res => this.var = res)
-    this.preferitiArr = this.var?.preferiti || []
+    this.authSVC.user$.subscribe(res => {this.var = res
+
+      this.preferitiArr = this.var?.preferiti || []
+  })
     console.log(this.preferitiArr);
 
 
