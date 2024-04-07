@@ -1,15 +1,18 @@
 <div class="container">
   <h1 class="text-center">Tutti i film</h1>
-  <div class="row">
+  <div class="row ">
     <div class="col-4"*ngFor="let film of filmArr">
-      <div class="card mt-3" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="...">
+      <div class="card mt-3">
+        <img [src]="film.image" class="card-img-top" alt="immagine film">
         <div class="card-body">
           <h5 class="card-title">{{film.titolo}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">{{film.anno}}</p>
+          <p class="card-text">{{film.trama}}</p>
+          <small class="card-text">{{film.genere}}</small>
+          <button (click)="salva(film)" class="btn btn-primary ms-3">Mi Piace</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+

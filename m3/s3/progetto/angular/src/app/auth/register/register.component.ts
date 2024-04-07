@@ -18,10 +18,11 @@ export class RegisterComponent {
     ){}
 
   signUp(){
+    this.registerData.preferiti = [];
     this.authSvc.register(this.registerData)
     .subscribe(data => {
 
-      this.router.navigate(['Film'])
+      this.router.navigate(['/Film'])
 
     })
   }

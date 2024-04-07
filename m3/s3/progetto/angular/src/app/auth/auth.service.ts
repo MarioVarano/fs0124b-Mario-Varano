@@ -35,7 +35,11 @@ export class AuthService {
 
 
   constructor(private http:HttpClient,
-    private router:Router) { }
+    private router:Router) {
+
+
+      this.restoreUser()
+    }
 
     registerUrl:string = environment.registerUrl
     loginUrl:string = environment.loginUrl
@@ -54,7 +58,6 @@ export class AuthService {
         localStorage.setItem('accessData', JSON.stringify(data))
 
         this.autoLogout(data.accessToken)
-
       }))
     }
 
@@ -68,6 +71,18 @@ export class AuthService {
 
     }
 
+    getAccessToken():string{
+      const userJson = localStorage.getItem('accessData')//recupero io dati di accesso
+      if(!userJson) return ''; //se l'utente non si è mai loggato blocca tutto
+
+      const accessData:AccessData = JSON.parse(userJson)//se viene eseguita questa riga significa che i dati ci sono, quindi la converto da json ad oggetto per permetterne la manipolazione
+      if(this.jwtHelper.isTokenExpired(accessData.accessToken)) return ''; //ora controllo se il token è scaduto, se lo è fermiamo la funzione
+
+      return accessData.accessToken
+    }
+
+
+
 
     autoLogout(jwt:string){
       const expDate = this.jwtHelper.getTokenExpirationDate(jwt) as Date;//trovo la data di scadenza del token
@@ -78,4 +93,48 @@ export class AuthService {
         this.logout()
       },expMs)
     }
+
+    restoreUser(){
+
+      const userJson = localStorage.getItem('accessData')//recupero io dati di accesso
+      if(!userJson) return; //se l'utente non si è mai loggato blocca tutto
+
+      const accessData:AccessData = JSON.parse(userJson)//se viene eseguita questa riga significa che i dati ci sono, quindi la converto da json ad oggetto per permetterne la manipolazione
+      if(this.jwtHelper.isTokenExpired(accessData.accessToken)) return; //ora controllo se il token è scaduto, se lo è fermiamo la funzione
+
+  //se nessun return viene eseguito proseguo
+      this.authSubject.next(accessData.user)//invio i dati dell'utente al behaviorsubject
+      this.autoLogout(accessData.accessToken)//riavvio il timer per la scadenza della sessione
+
+    }
+
+    errors(err: any) {
+      switch (err.error) {
+          case "Email and Password are required":
+              return new Error('Email e password obbligatorie');
+              break;
+          case "Email already exists":
+              return new Error('Utente esistente');
+              break;
+          case 'Email format is invalid':
+              return new Error('Email scritta male');
+              break;
+          case 'Cannot find user':
+              return new Error('utente inesistente');
+              break;
+              default:
+          return new Error('Errore');
+              break;
+      }
+    }
+
+
+    userUrl = environment.userUrl
+
+
+    updateUser(user:IUser): Observable<any> {
+      const url = `${this.userUrl}/${user.id}`;
+      return this.http.patch(url, user);
+    }
+
 }
