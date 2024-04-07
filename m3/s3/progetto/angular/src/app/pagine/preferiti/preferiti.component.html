@@ -1,1 +1,16 @@
-<p>preferiti works!</p>
+<div class="container">
+  <h1>I preferiti di:</h1>
+  <div class="row ">
+    <div class="col-4"*ngFor="let film of preferitiArr">
+      <div class="card mt-3">
+        <img [src]="film.image" class="card-img-top" alt="immagine film">
+        <div class="card-body">
+          <h5 class="card-title">{{film.titolo}}</h5>
+          <p class="card-text">{{film.anno}}</p>
+          <p class="card-text">{{film.trama}}</p>
+          <small class="card-text">{{film.genere}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
