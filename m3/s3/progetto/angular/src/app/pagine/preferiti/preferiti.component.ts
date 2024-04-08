@@ -12,6 +12,8 @@ import { IUser } from '../../Modules/i-user';
 export class PreferitiComponent {
   preferitiArr:IFilm[] = []
   var!:IUser|null
+  varN!:any
+
 
 
   constructor(private filmSvc:FilmService,
@@ -20,7 +22,7 @@ export class PreferitiComponent {
 
   ngOnInit(){
     this.authSVC.user$.subscribe(res => {this.var = res
-
+      this.varN = this.var?.name || []
       this.preferitiArr = this.var?.preferiti || []
   })
     console.log(this.preferitiArr);
