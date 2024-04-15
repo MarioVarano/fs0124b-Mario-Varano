@@ -18,7 +18,7 @@ public class Main {
     }
 
     public static String concatena(int a, String b){
-        String c = a + b;
-        return c;
+        String d = a + b;
+        return d;
     }
 }
