@@ -11,14 +11,14 @@ public class Audio extends Multimediale implements Riproducibili {
         this.volume = inverti(volume);
         setVolume(volume);
         this.durata = inverti(durata);
-
+//inverto segno se negativo
     }
     public int inverti(int valore){
         if(valore < 0) valore = -valore;
         return valore;
     }
 
-
+//setto un range per il volume
     private void setVolume(int volume) {
         if (volume >= minimo && volume <= massimo) {
             this.volume = volume;
@@ -27,7 +27,7 @@ public class Audio extends Multimediale implements Riproducibili {
         }
     }
 
-
+//funzione per visualizzare
     @Override
     public void play() {
         String livelloVolume = "";
@@ -41,6 +41,7 @@ public class Audio extends Multimediale implements Riproducibili {
 
 
     }
+    //alzo il volume di 1 se inferiore al massimo che ho impostato
 
     @Override
     public void alza() {
@@ -52,7 +53,7 @@ public class Audio extends Multimediale implements Riproducibili {
         }
     }
 
-
+// viceversa di alza ma sempre di uno per volta
     @Override
     public void abbassa() {
         if (volume > 0) {
