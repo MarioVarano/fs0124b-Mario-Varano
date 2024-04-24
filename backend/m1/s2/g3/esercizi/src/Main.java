@@ -20,13 +20,12 @@ public class Main {
         Customer Lui = new Customer("Daniele",2);
         Customer Ferro = new Customer("Tiziano",2);
 
-        Order ordine = new Order("forse arriva", LocalDate.of(2022,8,5),LocalDate.of(2024,4,24),List.of(prodotto3,prodotto2) ,Lui);
+        Order ordine = new Order("forse arriva", LocalDate.of(2022,8,5),LocalDate.of(2024,4,24),List.of(prodotto3) ,Lui);
         Order ordine2 = new Order("arriva", LocalDate.of(2023,8,5),LocalDate.of(2024,2,24),List.of(prodotto) ,Ferro);
         ordini.add(ordine);
         ordini.add(ordine2);
-        var a = ordini.stream()
-                .filter(order -> order.getLista().stream().anyMatch(product -> product.getCategory())).toList();
-        a.forEach(el -> System.out.println(el));
+        ordini.stream()
+                .filter(order -> order.getLista().stream().anyMatch(product -> product.getCategory().equals("baby"))).forEach(System.out::println);
 
 
     }
