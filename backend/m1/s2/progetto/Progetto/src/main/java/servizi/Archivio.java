@@ -8,7 +8,7 @@ public interface Archivio {
     void add(Catalogo c);
     void deleteISBN(Integer ISBN);
     Optional<Catalogo> getByISBN(Integer ISBN);
-    void getAnno(int anno);
+    Optional<Catalogo> getAnno(Integer anno);
     void getAutore(String autore);
 
 }

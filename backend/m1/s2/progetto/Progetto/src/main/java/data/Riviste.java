@@ -7,4 +7,12 @@ public class Riviste extends Catalogo{
         super(titolo, annoPubblicazione, numeroPagine);
         this.periodicità = periodicità;
     }
+
+    public Periodicita getPeriodicità() {
+        return periodicità;
+    }
+
+    public void setPeriodicità(Periodicita periodicità) {
+        this.periodicità = periodicità;
+    }
 }

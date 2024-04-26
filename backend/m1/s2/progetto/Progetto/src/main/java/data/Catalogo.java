@@ -4,7 +4,7 @@ public abstract class Catalogo {
     private static Integer nextISBN = 1;
     private Integer ISBN;
     private String titolo;
-    private int annoPubblicazione;
+    private Integer annoPubblicazione;
     private int numeroPagine;
 
     @Override
@@ -49,11 +49,11 @@ public abstract class Catalogo {
         this.titolo = titolo;
     }
 
-    public int getAnnoPubblicazione() {
+    public Integer getAnnoPubblicazione() {
         return annoPubblicazione;
     }
 
-    public void setAnnoPubblicazione(int annoPubblicazione) {
+    public void setAnnoPubblicazione(Integer annoPubblicazione) {
         this.annoPubblicazione = annoPubblicazione;
     }
 
