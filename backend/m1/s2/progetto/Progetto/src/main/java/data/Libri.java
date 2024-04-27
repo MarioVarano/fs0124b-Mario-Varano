@@ -1,5 +1,5 @@
 package data;
-
+//attributi diversi per la classe Libri
 public class Libri extends Catalogo{
     private String autore;
     private String genere;
@@ -25,8 +25,7 @@ public class Libri extends Catalogo{
         this.autore = autore;
         this.genere = genere;
     }
-
-
+    //utilizzo toString della classe astratta + quello della classe Libri
     @Override
     public String toString() {
         return super.toString() + "Libri{" +

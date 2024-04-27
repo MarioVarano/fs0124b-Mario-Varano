@@ -1,5 +1,6 @@
 package data;
 //classe astratta per attributi in comune tra le 2 classi
+//utilizzo un nextISBN per avere un indice degli elementi sempre crescente
 public abstract class Catalogo {
     private static Integer nextISBN = 1;
     private Integer ISBN;
