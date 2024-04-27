@@ -17,7 +17,7 @@ public abstract class Catalogo {
                 '}';
     }
 
-    public Catalogo(String titolo, int annoPubblicazione, int numeroPagine) {
+    public Catalogo(String titolo, Integer annoPubblicazione, int numeroPagine) {
         this.ISBN = nextISBN;
         nextISBN ++;
         this.titolo = titolo;
