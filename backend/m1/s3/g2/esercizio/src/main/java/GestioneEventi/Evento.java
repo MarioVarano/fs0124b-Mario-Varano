@@ -19,15 +19,28 @@ public class Evento {
     private String descrizione;
     private EventoT tipoEvento;
     private long numeroMassimoPartecipanti;
+    @Column(nullable = false)
+    @OneToOne(mappedBy = "partecipazione")
+    private Partecipazione partecipazione;
+    @Column(nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "luogo_evento_id")
+    private Location location;
 
-    public Evento(long id, String titolo, LocalDate dataEvento, String descrizione, EventoT tipoEvento, long numeroMassimoPartecipanti) {
+    public Evento(long id, String titolo, LocalDate dataEvento, String descrizione, EventoT tipoEvento, long numeroMassimoPartecipanti, Partecipazione partecipazione, Location location) {
         this.id = id;
         this.titolo = titolo;
         this.dataEvento = dataEvento;
         this.descrizione = descrizione;
         this.tipoEvento = tipoEvento;
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+        this.partecipazione = partecipazione;
+        this.location = location;
     }
+
+
+
+
 
     public Evento() {
     }
@@ -81,6 +94,7 @@ public class Evento {
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
     }
 
+
     @Override
     public String toString() {
         return "Evento{" +
@@ -90,6 +104,8 @@ public class Evento {
                 ", descrizione='" + descrizione + '\'' +
                 ", tipoEvento=" + tipoEvento +
                 ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti +
+                ", partecipazione=" + partecipazione +
+                ", location=" + location +
                 '}';
     }
 }
