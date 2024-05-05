@@ -18,8 +18,8 @@ public class Main {
 
 
 
-        Evento evento1 = new Evento(1,"ciao", LocalDate.of(2020,01,01),"bello", EventoT.PRIVATO,10);
-        Evento evento2 = new Evento(2,"ciao  a tutti", LocalDate.of(2020,01,01),"bello", EventoT.PRIVATO,10);
+        Evento evento1 = new Evento(1,"ciao", LocalDate.of(2020,01,01),"bello", EventoT.PRIVATO,10,);
+        Evento evento2 = new Evento(2,"ciao  a tutti", LocalDate.of(2020,01,01),"bello", EventoT.PRIVATO,10,);
 
         lista.add(evento1);
         lista.add(evento2);
