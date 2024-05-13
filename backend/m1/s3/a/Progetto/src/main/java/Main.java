@@ -17,7 +17,7 @@ public class Main {
         //FileArchivio.getByISBN(4);
         //FileArchivio.getByAnno(1995);
         //FileArchivio.getByAutore("lui");
-        FileArchivio.getByTitoloPart("c");
+        System.out.println(FileArchivio.getByTitoloPart("c"));
 
 
 
