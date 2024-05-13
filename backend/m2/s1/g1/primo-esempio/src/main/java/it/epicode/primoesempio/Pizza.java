@@ -24,7 +24,8 @@ public class Pizza {
     }
 
 
-    public void PizzaSpeciale(Toppings t){
+    public void PizzaSpeciale(Toppings t,String nome){
+        this.nome = nome;
         this.ingredienti.add(t.getIngrediente1());
         this.prezzo += t.getPrezzo();
         this.calorie += t.getCalorie();

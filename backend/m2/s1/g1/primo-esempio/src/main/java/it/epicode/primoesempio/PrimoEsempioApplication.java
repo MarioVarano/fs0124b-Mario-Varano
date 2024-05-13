@@ -20,7 +20,7 @@ public class PrimoEsempioApplication {
 			pizza1.Setta(10,1000,"Mario");
 			var top = (Toppings) ctx.getBean("toppings");
 			top.SettaT(10,50,"funghi");
-			pizza1.PizzaSpeciale(top);
+			pizza1.PizzaSpeciale(top, "Ai funghi");
 			var cola = (Drinks) ctx.getBean("drinks");
 			cola.SettaD(52,89,"cola");
 			System.out.println(pizza1);
