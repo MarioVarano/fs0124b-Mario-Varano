@@ -1,6 +1,5 @@
 package it.epicode.progetto.spring.service;
 
-import it.epicode.progetto.spring.entities.Postazioni;
 import it.epicode.progetto.spring.entities.Prenotazione;
 import it.epicode.progetto.spring.entities.Utente;
 import it.epicode.progetto.spring.repository.PrenotazioneRepository;
@@ -9,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.Optional;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -17,22 +16,30 @@ public class PrenotazioneService {
 
 
     @Autowired
-    PrenotazioneRepository prenotazioni;
+    PrenotazioneRepository prenotazioniDao;
 
     @Autowired
     PostazioneService postazioneService;
 
+    public Prenotazione save(Prenotazione prenotazione){
+        return prenotazioniDao.save(prenotazione);
+    }
 
-    public Optional<Prenotazione> crea(Long postazioneId, Utente utenti, LocalDate dataPrenotazione){
+
+
+
+    public Prenotazione crea(Long postazioneId, Utente utenti, LocalDate dataPrenotazione){
         var postazione = postazioneService.findById(postazioneId);
         if(postazione == null){
             log.info("Non c'è la postazione che stai cercando");
-        }else if(postazione.getOccupantiMax() - postazione.getOccupati() == 0){
-            log.info("Non è possibile prenotare, posti esauriti");
+            return null;
+        }else if((postazione.getOccupantiMax() - prenotazioniDao.findBydataPrenotazioneAndPostazioniId(dataPrenotazione, postazione.getId()).size()) == 0){
+            log.info("Non è possibile prenotare, posti esauriti per la data " + dataPrenotazione);
             return null;
         }else{
             log.info("Prenotazione effettuata" );
+            return new Prenotazione(postazione, utenti, dataPrenotazione);
         }
-         return Optional.of(new Prenotazione(postazione, utenti, dataPrenotazione));
+
     }
 }

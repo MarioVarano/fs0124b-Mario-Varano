@@ -1,6 +1,7 @@
 package it.epicode.progetto.spring;
 
 import it.epicode.progetto.spring.entities.AppConfig;
+import it.epicode.progetto.spring.entities.TipoPostazione;
 import it.epicode.progetto.spring.service.EdificioService;
 import it.epicode.progetto.spring.service.PostazioneService;
 import it.epicode.progetto.spring.service.PrenotazioneService;
@@ -10,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 @Slf4j
@@ -32,12 +35,24 @@ public class Runner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
     try{
-        utenteService.save(appConfig.marioBean());
-        utenteService.save(appConfig.lucaBean());
-        edificioService.save(appConfig.edificioMeiBean());
-        edificioService.save(appConfig.villaMaestroBean());
-        postazioneService.save(appConfig.postazione1Bean());
-        postazioneService.save(appConfig.postazione2Bean());
+        var utente1 = appConfig.marioBean();
+        var utente2 = appConfig.lucaBean();
+        utenteService.save(utente1);
+        utenteService.save(utente2);
+        var edificio1 = appConfig.edificioMeiBean();
+        var edificio2 = appConfig.villaMaestroBean();
+        edificioService.save(edificio1);
+        edificioService.save(edificio2);
+        var postazione1 = appConfig.postazione1Bean();
+        var postazione2 = appConfig.postazione2Bean();
+        postazioneService.save(postazione1);
+        postazioneService.save(postazione2);
+
+        var prenotazione1 = prenotazioneService.crea(1L,utente1, LocalDate.now());
+        prenotazioneService.save(prenotazione1);
+
+        postazioneService.cercaPostazione(TipoPostazione.OPENSPACE,"Roma");
+
     }catch (Exception ex) {
         System.err.println(ex.getMessage());
     }

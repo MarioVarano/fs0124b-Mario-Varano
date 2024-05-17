@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class Prenotazione extends Base{
-@OneToOne
+@ManyToOne
 @JoinColumn(name = "postazione_id")
 private Postazioni postazioni;
 @ManyToOne

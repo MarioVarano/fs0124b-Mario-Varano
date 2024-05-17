@@ -41,7 +41,7 @@ public class AppConfig {
     public Edificio villaMaestroBean(){
         return Edificio.builder()
                 .withName("VillaMaestro")
-                .withCitta("Milano")
+                .withCitta("Roma")
                 .withIndirizzo("casa del Maestro")
                 .build();
     }
