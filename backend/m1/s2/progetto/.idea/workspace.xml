@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="44ad0522-96c4-4082-a6c5-aa6b7c08b58a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../m2/s1/progetto/GestionePrenotazioni/src/main/java/it/epicode/progetto/spring/entities/Edificio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../m2/s1/progetto/GestionePrenotazioni/src/main/java/it/epicode/progetto/spring/entities/Postazioni.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../m2/s1/progetto/GestionePrenotazioni/src/main/java/it/epicode/progetto/spring/entities/Prenotazione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../m2/s1/progetto/GestionePrenotazioni/src/main/java/it/epicode/progetto/spring/entities/TipoPostazione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../m2/s1/progetto/GestionePrenotazioni/src/main/java/it/epicode/progetto/spring/entities/Utente.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MarioVarano"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MarioVarano/fs0124b-Mario-Varano.git",
+    "accountId": "5ae9e811-12a4-4a02-91a6-f7dfd04d3ae0"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2gaVVDgOfs7Ssy7dlT7E4yHAoqU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alexx/Desktop/fs0124b-Mario-Varano/backend/m1/s2/progetto"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44ad0522-96c4-4082-a6c5-aa6b7c08b58a" name="Changes" comment="" />
+      <created>1715935696628</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715935696628</updated>
+    </task>
+    <servers />
+  </component>
+</project>
