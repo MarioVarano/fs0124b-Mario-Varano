@@ -11,4 +11,6 @@ import java.util.List;
 public interface PrenotazioneRepository extends JpaRepository<Prenotazione, Long> {
 
     List<Prenotazione> findBydataPrenotazioneAndPostazioniId(LocalDate data, Long PostazioniId);
+
+    Prenotazione findBydataPrenotazioneAndUtentiId(LocalDate data, Long UtenteId);
 }

@@ -33,7 +33,7 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+    //inizializzo le istanze che mi servono
     try{
         var utente1 = appConfig.marioBean();
         var utente2 = appConfig.lucaBean();
@@ -48,9 +48,11 @@ public class Runner implements CommandLineRunner {
         postazioneService.save(postazione1);
         postazioneService.save(postazione2);
 
-        var prenotazione1 = prenotazioneService.crea(1L,utente1, LocalDate.now());
-        prenotazioneService.save(prenotazione1);
+         prenotazioneService.crea(1L,utente1, LocalDate.now());
+         //prova che non posso prenotare per lo stesso giorno
+        prenotazioneService.crea(2L,utente1, LocalDate.now());
 
+        //cerca postazione per tipo e città
         postazioneService.cercaPostazione(TipoPostazione.OPENSPACE,"Roma");
 
     }catch (Exception ex) {
