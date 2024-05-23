@@ -1,6 +1,8 @@
 package it.epicode.springweb.services;
 
 import it.epicode.springweb.entities.Autore;
+import it.epicode.springweb.exception.BadRequestException;
+import it.epicode.springweb.payloads.AutoreDTO;
 import it.epicode.springweb.repository.AutoriRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,19 @@ public class AutoreService implements AutoreServiceInterface{
 
     @Override
     public Autore save(Autore autore) {
+        return null;
+    }
+
+
+    public Autore save(AutoreDTO body) {
+        autoriDao.findByEmail(body.email()).isPresent();
+        Autore autore = new Autore();
+        autore.setAvatar("https://ui-avatars.com/api/?name=" + body.nome() + "+" + body.cognome());
+        autore.setEmail(body.email());
+        autore.setCognome(body.cognome());
+        autore.setDataDiNascita(body.dataDiNascita());
+
+
         return autoriDao.save(autore);
     }
 
