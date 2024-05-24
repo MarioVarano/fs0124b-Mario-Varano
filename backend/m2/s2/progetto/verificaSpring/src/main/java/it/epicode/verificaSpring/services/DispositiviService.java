@@ -1,8 +1,11 @@
 package it.epicode.verificaSpring.services;
 
 import it.epicode.verificaSpring.controllers.records.DispositiviRequest;
+import it.epicode.verificaSpring.entities.Dipendenti;
 import it.epicode.verificaSpring.entities.Dispositivi;
+import it.epicode.verificaSpring.enums.StatoDispositivo;
 import it.epicode.verificaSpring.repository.DispositiviRepository;
+import it.epicode.verificaSpring.services.exceptions.BadRequestException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +19,8 @@ public class DispositiviService {
 
     @Autowired
     DispositiviRepository dispositivi;
+    @Autowired
+    DipendentiService dipendente;
 
 
     public Dispositivi save(DispositiviRequest d){
@@ -53,5 +58,18 @@ public class DispositiviService {
     }
 
 
+    public Dispositivi assegnaDispositivo(Long dipendenteId, Long dispositivoId) {
+        Dipendenti dipendenti = dipendente.findById(dipendenteId);
+        Dispositivi dispositivo = dispositivi.findById(dispositivoId).orElseThrow();
+        if(dispositivo.getStato().equals(StatoDispositivo.DISPONIBILE)){
+            dispositivo.setDipendenti(dipendenti);
+            dispositivi.save(dispositivo);
+        }else{
+            throw new RuntimeException("Non si può assegnare perchè " + dispositivo.getStato());
+        }
+        return dispositivo;
+
+
+    }
 
 }

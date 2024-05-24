@@ -65,6 +65,16 @@ public class DispositiviController {
         return ResponseEntity.noContent().build();
     }
 
+    @PutMapping("/{idDipe}/{idDispositivo}")
+    public ResponseEntity<Dispositivi>aggiungiDipendente(@PathVariable Long idDipe, @PathVariable Long idDispositivo){
+        try {
+            Dispositivi dispositivo = dispositivi.assegnaDispositivo(idDipe, idDispositivo);
+            return ResponseEntity.ok(dispositivo);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(null); // Puoi personalizzare la gestione degli errori
+        }
+    }
+
 
 
 }
