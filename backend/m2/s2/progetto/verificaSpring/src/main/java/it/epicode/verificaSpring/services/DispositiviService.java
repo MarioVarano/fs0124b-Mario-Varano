@@ -6,6 +6,7 @@ import it.epicode.verificaSpring.entities.Dispositivi;
 import it.epicode.verificaSpring.enums.StatoDispositivo;
 import it.epicode.verificaSpring.repository.DispositiviRepository;
 import it.epicode.verificaSpring.services.exceptions.BadRequestException;
+import it.epicode.verificaSpring.services.exceptions.DispositivoNonDisponibileException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -63,9 +64,10 @@ public class DispositiviService {
         Dispositivi dispositivo = dispositivi.findById(dispositivoId).orElseThrow();
         if(dispositivo.getStato().equals(StatoDispositivo.DISPONIBILE)){
             dispositivo.setDipendenti(dipendenti);
+            dispositivo.setStato(StatoDispositivo.ASSEGNATO);
             dispositivi.save(dispositivo);
         }else{
-            throw new RuntimeException("Non si può assegnare perchè " + dispositivo.getStato());
+          throw new DispositivoNonDisponibileException("dispositivo non disponibile: " + dispositivo.getStato());
         }
         return dispositivo;
 

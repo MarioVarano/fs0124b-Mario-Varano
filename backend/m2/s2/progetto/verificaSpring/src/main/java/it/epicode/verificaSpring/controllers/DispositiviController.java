@@ -7,7 +7,9 @@ import it.epicode.verificaSpring.entities.Dipendenti;
 import it.epicode.verificaSpring.entities.Dispositivi;
 import it.epicode.verificaSpring.services.DispositiviService;
 import it.epicode.verificaSpring.services.exceptions.BadRequestException;
+import it.epicode.verificaSpring.services.exceptions.DispositivoNonDisponibileException;
 import it.epicode.verificaSpring.services.exceptions.DispositivoNotFoundException;
+import kong.unirest.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -66,12 +68,15 @@ public class DispositiviController {
     }
 
     @PutMapping("/{idDipe}/{idDispositivo}")
-    public ResponseEntity<Dispositivi>aggiungiDipendente(@PathVariable Long idDipe, @PathVariable Long idDispositivo){
+    public ResponseEntity<?>aggiungiDipendente(@PathVariable Long idDipe, @PathVariable Long idDispositivo){
         try {
             Dispositivi dispositivo = dispositivi.assegnaDispositivo(idDipe, idDispositivo);
             return ResponseEntity.ok(dispositivo);
+        }catch(DispositivoNonDisponibileException e){
+            String errorMessage = "Impossibile assegnare. " + e.getMessage();
+            return ResponseEntity.badRequest().body(errorMessage);
         } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().body(null); // Puoi personalizzare la gestione degli errori
+            return ResponseEntity.badRequest().body(null);
         }
     }
 

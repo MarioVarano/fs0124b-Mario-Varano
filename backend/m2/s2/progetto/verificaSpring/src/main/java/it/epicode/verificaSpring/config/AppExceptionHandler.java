@@ -1,6 +1,8 @@
 package it.epicode.verificaSpring.config;
 
 import it.epicode.verificaSpring.services.exceptions.ApiException;
+import it.epicode.verificaSpring.services.exceptions.DispositivoNonDisponibileException;
+import kong.unirest.HttpStatus;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;
@@ -28,12 +30,16 @@ public class AppExceptionHandler extends ResponseEntityExceptionHandler{
                 ).toList();
         return new ResponseEntity<List<ValidationError>>(body, e.status);
     }
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
