@@ -4,8 +4,11 @@ package it.epicode.verificaSpring.controllers;
 import it.epicode.verificaSpring.controllers.records.DipendentiRequest;
 import it.epicode.verificaSpring.entities.Dipendenti;
 import it.epicode.verificaSpring.services.DipendentiService;
+import it.epicode.verificaSpring.services.exceptions.BadRequestException;
+import it.epicode.verificaSpring.services.exceptions.DipendenteNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,13 +25,19 @@ public class DipendentiController {
 
 
     @PostMapping
-    public ResponseEntity<Dipendenti>saveDipendenti(@Validated @RequestBody DipendentiRequest request){
+    public ResponseEntity<Dipendenti>saveDipendenti(@Validated @RequestBody DipendentiRequest request, BindingResult validator){
+        if(validator.hasErrors()){
+            throw new BadRequestException(validator.getAllErrors());
+        }
         Dipendenti salva = dipendenti.save(request);
         return ResponseEntity.ok(salva);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Dipendenti> updateDipendenti(@PathVariable Long id, @Validated @RequestBody DipendentiRequest request){
+    public ResponseEntity<Dipendenti> updateDipendenti(@PathVariable Long id, @Validated @RequestBody DipendentiRequest request, BindingResult validator){
+        if(validator.hasErrors()){
+            throw new DipendenteNotFoundException(validator.getAllErrors());
+        }
         Dipendenti update = dipendenti.update(id,request);
         return ResponseEntity.ok(update);
     }
