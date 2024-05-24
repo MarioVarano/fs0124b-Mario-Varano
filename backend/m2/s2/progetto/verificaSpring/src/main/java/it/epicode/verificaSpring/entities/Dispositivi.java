@@ -25,4 +25,8 @@ public class Dispositivi extends Base{
     private StatoDispositivo stato;
 
 
+    public Dispositivi(TipoDispositivo tipo, StatoDispositivo stato) {
+        this.tipo = tipo;
+        this.stato = stato;
+    }
 }

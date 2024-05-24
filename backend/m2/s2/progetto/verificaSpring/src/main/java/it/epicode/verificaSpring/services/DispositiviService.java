@@ -20,7 +20,6 @@ public class DispositiviService {
 
     public Dispositivi save(DispositiviRequest d){
         Dispositivi dispositivo = new Dispositivi(
-                d.dipendente(),
                 d.tipo(),
                 d.stato()
         );
@@ -42,6 +41,15 @@ public class DispositiviService {
 
     public List<Dispositivi> getAll(){
         return dispositivi.findAll();
+    }
+
+
+    public Dispositivi update(Long id, DispositiviRequest dispositivo){
+        Dispositivi dipes = dispositivi.findById(id).orElseThrow(() -> new RuntimeException("Dispositivo non c'è"));
+        dipes.setTipo(dispositivo.tipo());
+        dipes.setStato(dispositivo.stato());
+
+        return dispositivi.save(dipes);
     }
 
 

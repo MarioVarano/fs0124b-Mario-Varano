@@ -9,8 +9,6 @@ public record DispositiviRequest(
         @NotNull(message = "Tipo è obbligatorio")
         TipoDispositivo tipo,
         @NotNull(message = "Stato del dispositivo è obbligatorio")
-        StatoDispositivo stato,
-        @NotNull(message = "dipendente deve esserci")
-        Dipendenti dipendente) {
+        StatoDispositivo stato) {
 
 }
