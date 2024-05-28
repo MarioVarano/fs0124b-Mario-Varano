@@ -4,9 +4,7 @@ import it.epicode.verificaSpring.entities.Base;
 import it.epicode.verificaSpring.entities.DTO.Dtobase;
 import it.epicode.verificaSpring.entities.DTO.EntityBase;
 
-public interface Mapper <S extends Dtobase, D extends Base>{
+public interface Mapper <D,S>{
 
-    S convertTo(D input);
-
-    D convertFrom(S input);
+    S map(D input);
 }
