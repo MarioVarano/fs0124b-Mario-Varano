@@ -21,34 +21,30 @@ public class EventoService {
     UtenteRepository utente;
 
 
-    public Evento save(EventoRequest e){
-        Evento ev = new Evento(
-                e.nome(),
-                e.descrizione(),
-                e.data(),
-                e.luogo(),
-                e.numeroPosti()
-        );
-        return evento.save(ev);
 
+    public Evento save(EventoRequest body) {
+        var ute = isOrganizzatore(body.utenteid());
+        if (ute != null) {
+            var event = Evento.builder()
+                    .withTitolo(body.titolo())
+                    .withDescrizione(body.descrizione())
+                    .withData(body.data())
+                    .withLuogo(body.luogo())
+                    .withNumeroPosti(body.numeroPosti())
+                    .build();
+            evento.save(event);
+            ute.addEvento(event);
+            utente.save(ute);
+            return event;
+        } else throw new RuntimeException("Utente non autorizzato");
     }
 
-    public Evento creaOrIscrivi(Long idUtente, EventoRequest e){
-        Utente ute = utente.findById(idUtente).orElseThrow(() -> new RuntimeException("L'utente non c'è"));
-        if(ute.getRuolo().getNome().equals("utente")){
-            Evento ev = new Evento(
-                    e.nome(),
-                    e.descrizione(),
-                    e.data(),
-                    e.luogo(),
-                    e.numeroPosti()
-            );
-            ute.setEvento();
-            return evento.save(ev);
-
-        }
-
+    public Utente isOrganizzatore(Long id) {
+        var ute = utente.findById(id).orElseThrow(() -> new RuntimeException("Utente non esistente"));
+        if (ute.getRuolo().getNome().equals("organizzatore")) return ute;
+        else return null;
     }
+
 
 }
 

@@ -21,4 +21,8 @@ public class Evento extends Base{
     private LocalDate data;
     private Luoghi luogo;
     private int numeroPosti;
+
+
+
+
 }
