@@ -1,4 +1,4 @@
-package it.epicode.Ultimo.controllers.exceptions;
+package it.epicode.Ultimo.services.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.ObjectError;
