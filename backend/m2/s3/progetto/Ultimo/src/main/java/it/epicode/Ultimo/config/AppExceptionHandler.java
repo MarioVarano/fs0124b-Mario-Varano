@@ -1,6 +1,6 @@
 package it.epicode.Ultimo.config;
 
-import it.epicode.Ultimo.controllers.exceptions.ApiException;
+import it.epicode.Ultimo.services.exceptions.ApiException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;

@@ -11,10 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/evento")
@@ -32,4 +29,21 @@ public class EventoController {
 
         return ResponseEntity.ok(eventoService.save(request));
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Evento> updateDipendenti(@PathVariable Long id, @Validated @RequestBody Evento request, BindingResult validator) throws BadRequestException {
+        if(validator.hasErrors()){
+            throw new BadRequestException(String.valueOf(validator.getAllErrors()));
+        }
+        Evento update = eventoService.update(id,request);
+        return ResponseEntity.ok(update);
+    }
+
+
+    @PatchMapping("/prenota/{idUtente}/{idEvento}")
+    public ResponseEntity<Evento> update(@PathVariable Long idUtente, @PathVariable Long idEvento){
+        var prenotazione = eventoService.prenotazione(idUtente, idEvento);
+        return ResponseEntity.ok(prenotazione);
+    }
+
 }

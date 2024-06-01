@@ -15,6 +15,8 @@ import java.util.List;
 
 public class Utente extends Base{
     private String nome;
+    private String email;
+    private String password;
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "ruolo_id")
     private Ruoli ruolo;
@@ -23,10 +25,13 @@ public class Utente extends Base{
     private List<Evento> evento;
 
     @Builder(setterPrefix = "with")
-    public Utente(String nome, Ruoli ruolo) {
+    public Utente(String nome, String email, String password, Ruoli ruolo) {
         this.nome = nome;
+        this.email = email;
+        this.password = password;
         this.ruolo = ruolo;
     }
+
     public void addEvento(Evento e) {
         this.evento.add(e);
     }

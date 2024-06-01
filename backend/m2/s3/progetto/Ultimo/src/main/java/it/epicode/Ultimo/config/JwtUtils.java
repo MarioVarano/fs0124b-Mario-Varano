@@ -10,7 +10,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
 
 /**
  * Gestione delle funzionalità legate al token jwt.
