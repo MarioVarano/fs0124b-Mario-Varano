@@ -1,0 +1,148 @@
+[33m87da0e3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: checkout: moving from develop to main
+[33m80190f0[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{1}: commit: prova
+[33m9f56bbf[m HEAD@{2}: checkout: moving from develop to develop
+[33m9f56bbf[m HEAD@{3}: commit: Commit delle modifiche locali prima del merge
+[33m78d4453[m[33m ([m[1;31morigin/release/1.0[m[33m, [m[1;32mrelease/1.0[m[33m)[m HEAD@{4}: checkout: moving from release/1.0 to develop
+[33m78d4453[m[33m ([m[1;31morigin/release/1.0[m[33m, [m[1;32mrelease/1.0[m[33m)[m HEAD@{5}: checkout: moving from develop to release/1.0
+[33m78d4453[m[33m ([m[1;31morigin/release/1.0[m[33m, [m[1;32mrelease/1.0[m[33m)[m HEAD@{6}: checkout: moving from release/1.0 to develop
+[33m78d4453[m[33m ([m[1;31morigin/release/1.0[m[33m, [m[1;32mrelease/1.0[m[33m)[m HEAD@{7}: checkout: moving from develop to release/1.0
+[33m78d4453[m[33m ([m[1;31morigin/release/1.0[m[33m, [m[1;32mrelease/1.0[m[33m)[m HEAD@{8}: checkout: moving from develop to develop
+[33m78d4453[m[33m ([m[1;31morigin/release/1.0[m[33m, [m[1;32mrelease/1.0[m[33m)[m HEAD@{9}: commit: ultimo
+[33m574098d[m HEAD@{10}: commit: ultimo
+[33m87da0e3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{11}: checkout: moving from main to develop
+[33m87da0e3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{12}: commit: patterns
+[33m5a0e4c1[m HEAD@{13}: commit: pattern
+[33me56a5ff[m HEAD@{14}: commit: patterns
+[33m1f3d0eb[m HEAD@{15}: commit: register2
+[33m0f03577[m HEAD@{16}: commit: register
+[33m939bc5d[m HEAD@{17}: commit: aggiungiDipe
+[33m5197302[m HEAD@{18}: commit: aggiungiDipe
+[33mc1f0d99[m HEAD@{19}: commit: springweb3
+[33m696408d[m HEAD@{20}: commit: springweb2
+[33mbe24655[m HEAD@{21}: commit: springweb2
+[33m790ec75[m HEAD@{22}: commit: web2
+[33mc77a6f5[m HEAD@{23}: commit: springweb
+[33mc424ee0[m HEAD@{24}: commit: Restful
+[33m4f5f4d8[m HEAD@{25}: commit: verificaspring completo
+[33m3378441[m HEAD@{26}: commit: verificaspring2
+[33me94857f[m HEAD@{27}: commit: verificaspring
+[33mdd32125[m HEAD@{28}: commit: spring jpa
+[33m3f691ce[m HEAD@{29}: commit: junit
+[33m6ef68d4[m HEAD@{30}: commit: spring2
+[33m4b8f412[m HEAD@{31}: commit: spring1
+[33m6342acd[m HEAD@{32}: commit: spring1
+[33m267f06b[m HEAD@{33}: commit: progettojava
+[33m5e3906d[m HEAD@{34}: commit: progettojava
+[33m4627f2f[m HEAD@{35}: commit: eserciziojava
+[33m23e2110[m HEAD@{36}: commit: persistence
+[33m63ecbb1[m HEAD@{37}: commit: postgresql
+[33m7761bb2[m HEAD@{38}: commit: grazieROBY
+[33m279bff4[m HEAD@{39}: pull: Merge made by the 'ort' strategy.
+[33mfd111d0[m HEAD@{40}: commit: agg
+[33mb5684a7[m HEAD@{41}: commit: esercizioJava/s2
+[33m36fb415[m HEAD@{42}: commit (amend): esercizioJava/s2
+[33m6ba3781[m HEAD@{43}: commit: esercizioJava/s2
+[33m11556e4[m HEAD@{44}: commit: aggiornato
+[33m03f870d[m HEAD@{45}: commit: esercizioJava/s2
+[33mc6a63b6[m HEAD@{46}: commit: esercizio3
+[33m6271e07[m HEAD@{47}: commit: esercizio2
+[33m9e157e3[m HEAD@{48}: commit: esercizio
+[33m731e95d[m HEAD@{49}: commit: esercizio
+[33md7f5a5d[m HEAD@{50}: commit: esercizio
+[33m5bcd401[m HEAD@{51}: commit: eserciziog2
+[33mb9ec3bc[m HEAD@{52}: commit: esercizio1
+[33m3024691[m HEAD@{53}: commit: progetto
+[33mf5bd262[m HEAD@{54}: commit: progetto
+[33m75096ea[m HEAD@{55}: commit: esercizio 4
+[33mf816a6a[m HEAD@{56}: commit: esercizio 3
+[33m7261dae[m HEAD@{57}: commit: esercizio2
+[33m1f3aea2[m HEAD@{58}: commit: esercizio2
+[33m9573101[m HEAD@{59}: commit: esercizio1
+[33m273a35e[m HEAD@{60}: merge origin/main: Merge made by the 'ort' strategy.
+[33m9576b92[m HEAD@{61}: commit: funziona
+[33m62d5fd7[m HEAD@{62}: commit: java
+[33m6f71eae[m HEAD@{63}: commit (amend): java
+[33m632ae25[m HEAD@{64}: commit: fine
+[33m5f460f7[m HEAD@{65}: commit: forse si vedono, grazie Mike
+[33m7a777ea[m HEAD@{66}: commit: aggiorno json ma non visualizzo
+[33mc4f6422[m HEAD@{67}: commit: non riesco ad aggiornare il db.json
+[33m75d6a57[m HEAD@{68}: commit: GrazieMike
+[33m68736a2[m HEAD@{69}: commit: SonoMario
+[33m99b1fa7[m HEAD@{70}: commit: auth
+[33m58a998f[m HEAD@{71}: commit: forms
+[33mf6d64bf[m HEAD@{72}: commit: esercizio
+[33m497e0fe[m HEAD@{73}: commit: auguri Mike
+[33m9f8ff6a[m HEAD@{74}: commit: modifiche, grazie Mike
+[33mf61e0f8[m HEAD@{75}: commit: grazie Mike
+[33m5199ed5[m HEAD@{76}: commit: commit2
+[33m1e621cd[m HEAD@{77}: commit: progettoangular2
+[33m55b0884[m HEAD@{78}: commit: esercizio
+[33m15e4eb5[m HEAD@{79}: commit: esercizio
+[33m84ad3ff[m HEAD@{80}: commit: tags colorati
+[33m4d7de63[m HEAD@{81}: commit: esercizio
+[33md05f972[m HEAD@{82}: commit: esercizio
+[33me0ce6ad[m HEAD@{83}: commit: finito
+[33mf6b6471[m HEAD@{84}: commit: currency
+[33m346a095[m HEAD@{85}: commit: errore su footer
+[33m7ff7a70[m HEAD@{86}: commit: no extra
+[33m8168021[m HEAD@{87}: commit: progetto angular
+[33m5175e52[m HEAD@{88}: commit: esercizio
+[33md8fec0f[m HEAD@{89}: commit: angular g2
+[33m794f90d[m HEAD@{90}: commit: angular1
+[33m2d58608[m HEAD@{91}: commit: esercizio1
+[33mb71078d[m HEAD@{92}: commit: Tolto style dalle card
+[33m4c0ec0a[m HEAD@{93}: commit: finito
+[33m3fc9536[m HEAD@{94}: commit: recupero queryparams dalla pagina modifica
+[33m20fdb45[m HEAD@{95}: commit: progetto
+[33m1fa7917[m HEAD@{96}: commit: 1 foto
+[33ma384bb7[m HEAD@{97}: commit: esercizio g4
+[33m7d68eae[m HEAD@{98}: commit: esercizio fetch
+[33m2c1a2db[m HEAD@{99}: commit: esercizio g2
+[33mcd449c0[m HEAD@{100}: commit: oop
+[33m49b6a92[m HEAD@{101}: commit: progetto
+[33mbe63800[m HEAD@{102}: commit: progetto netflix
+[33m11bfa36[m HEAD@{103}: commit: bootstrap-sass
+[33m7b893f1[m HEAD@{104}: commit: sass_g1
+[33m2eed289[m HEAD@{105}: commit: bootstrap_g2
+[33m89fa5c3[m HEAD@{106}: commit: finito
+[33m15deb40[m HEAD@{107}: commit: bootstrap
+[33m3948679[m HEAD@{108}: commit: progetto
+[33mb2b98ad[m HEAD@{109}: commit: risolto problema postit
+[33m3d9acf4[m HEAD@{110}: commit: postit
+[33mf615080[m HEAD@{111}: commit: nav e article
+[33mfd05fc6[m HEAD@{112}: commit: esercizio g3
+[33mbd19371[m HEAD@{113}: commit: icone
+[33me12b16b[m HEAD@{114}: commit: m2/s1/g2
+[33m5504fb5[m HEAD@{115}: commit: layout-medium
+[33md157149[m HEAD@{116}: commit: modifiche
+[33m8a10132[m HEAD@{117}: commit: halfTree
+[33mddb50f4[m HEAD@{118}: commit: esercizio_29
+[33m1192417[m HEAD@{119}: commit: progetto
+[33m5c2be2d[m HEAD@{120}: commit: forse_funziona
+[33m0393729[m HEAD@{121}: commit: modifiche
+[33m1671a3e[m HEAD@{122}: commit: esercizio_s3_g4
+[33mda09697[m HEAD@{123}: commit: esercizio_s3_g3
+[33m3c40f47[m HEAD@{124}: commit: esercizio_s3_g2
+[33mfd7b673[m HEAD@{125}: commit: fino_al10
+[33mfd85174[m HEAD@{126}: commit: s3_g1
+[33mbb1d887[m HEAD@{127}: commit: ultimo
+[33mb47637c[m HEAD@{128}: commit: immagini_allineate
+[33m0093bf1[m HEAD@{129}: commit: progetto_2
+[33mcba17c0[m HEAD@{130}: commit: correzione
+[33mad431a8[m HEAD@{131}: commit: esercizio-s2-g4
+[33m3d331c6[m HEAD@{132}: commit: correzione
+[33m58053bc[m HEAD@{133}: commit: esercizio_s2_g3
+[33m33f34d1[m HEAD@{134}: commit: esercizio2-s2
+[33m356b458[m HEAD@{135}: commit: line-heigh-titolo
+[33me029e3f[m HEAD@{136}: commit: Esercizio-js
+[33m8651ea7[m HEAD@{137}: commit: finito
+[33m8c00e37[m HEAD@{138}: commit: taglio-immagine
+[33mffe2de2[m HEAD@{139}: commit: ultime modifiche
+[33m3cf9657[m HEAD@{140}: commit: progetto
+[33m0a41a97[m HEAD@{141}: commit: Esercizio 4
+[33m360d1e7[m HEAD@{142}: commit: esercizio 4
+[33m3be86b2[m HEAD@{143}: commit: esercizio 3
+[33m84e3b78[m HEAD@{144}: commit: esercizio 3
+[33m186ffb4[m HEAD@{145}: commit: esercizio 2 ultimo
+[33m2bc18d9[m HEAD@{146}: commit: esercizio giorno 2
+[33m8bac116[m HEAD@{147}: commit (initial): first commit
